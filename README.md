@@ -13,7 +13,7 @@ npm install --save bluechip-functions
 ```
 
 
-## et Up and Usage
+## Set Up and Usage
 Import these relevant dependencies into your app file and also add the service to providers array :
 ```
 import { DatePipe} from '@angular/common';
