@@ -116,6 +116,46 @@
           }
         }
       }
+    },
+    "BluechipFunctions": {
+      "root": "projects/bluechip-functions",
+      "sourceRoot": "projects/bluechip-functions/src",
+      "projectType": "library",
+      "prefix": "NgxBlueChip",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/bluechip-functions/tsconfig.lib.json",
+            "project": "projects/bluechip-functions/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/bluechip-functions/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bluechip-functions/src/test.ts",
+            "tsConfig": "projects/bluechip-functions/tsconfig.spec.json",
+            "karmaConfig": "projects/bluechip-functions/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/bluechip-functions/tsconfig.lib.json",
+              "projects/bluechip-functions/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "BluechipFuncLibrary"
