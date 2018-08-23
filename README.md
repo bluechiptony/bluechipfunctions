@@ -14,18 +14,20 @@ npm install --save bluechip-functions
 
 
 ##Set Up and Usage
-Import this into your app.module.ts file and also add the service to providers array :
+Import these relevant dependencies into your app file and also add the service to providers array :
 ```
+import { DatePipe} from '@angular/common';
 import { BluechipFunctionsService} from 'bluechip-functions';
 
 ...
 providers:[
+  DatePipe,
   BluechipFunctionsService
 ]
 
 ```
 
-Import this into your desired component and usage ;
+Import this into the component of your heart desire :
 ```
 import { BluechipFunctionsService} from 'bluechip-functions';
 

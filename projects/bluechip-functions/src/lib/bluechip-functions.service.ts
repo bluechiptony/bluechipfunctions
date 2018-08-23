@@ -12,8 +12,10 @@ export class BluechipFunctionsService {
       let dateString:string = null;
 
 
-      if(longDate != undefined || longDate != null){
+      if(longDate == undefined || longDate == null){
           console.log("Cannot process value of undefined")
+
+      }else{
           dateString= this.datePipe.transform(longDate, 'mediumDate');
       }
 

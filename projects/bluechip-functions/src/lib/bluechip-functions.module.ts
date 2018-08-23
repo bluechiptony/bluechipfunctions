@@ -5,6 +5,7 @@ import {DatePipe} from '@angular/common';
 
 @NgModule({
   imports: [
+    BluechipFunctionsService
   ],
   providers:[
     BluechipFunctionsService,
